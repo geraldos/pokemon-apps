@@ -4,6 +4,7 @@ const H1 = styled.h1`
     font-size: ${props => props.size};
     font-weight: bold;
     text-align: center;
+    color: #be0000;
 `;
 
 function HeaderTitle(props) {

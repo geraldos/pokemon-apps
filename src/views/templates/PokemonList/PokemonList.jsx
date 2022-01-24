@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { mq_min_width, mq_max_width } from "../../../libs/common/MediaQueris";
-import PokemonResource from "../../../data/pokemon-resources";
+import PokemonResource from "../../../data/Pokemon-Resource";
 import CardTemplate from "../../../components/PokemonCards";
 import HeaderTitle from "../../../components/HeaderTitle";
 import styled from '@emotion/styled';
@@ -19,7 +19,7 @@ const Div = styled.div`
     width: 100%;
     margin: 60px auto;
     text-align: center;
-`
+`;
 
 const DivList = styled.div`
     ${mq_min_width[4]} {
@@ -31,10 +31,11 @@ const DivList = styled.div`
     ${mq_min_width[6]} {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 32px;
     }
     display: grid;
     grid-row-gap: 16px;
-`
+`;
 
 function PokemonList() {
     const [data, setData] = useState({});

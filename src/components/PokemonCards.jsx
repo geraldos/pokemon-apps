@@ -33,7 +33,6 @@ const H1 = styled.h1`
     }
 
     font-weight: 400;
-    margin-top: 16px;
     transition: 0.3s opacity;
     font-size: 22px;
     hover {
@@ -43,16 +42,17 @@ const H1 = styled.h1`
         text-decoration: none;
         color: #be0000;
     }
+    color: #be0000;
 `;
 
 function CardTemplate(props) {
     return(
-        <NavLink to='/pokemon_detail/:name'>
+        <NavLink to={`pokemon_detail/${props.name}`} style={{ textDecoration: 'none' }}>
             <Card>
                 <Img
                     src={`${CONFIG.base_url_image}/${props.url}.png`}
                     alt={props.name}
-                    height='232px'/>
+                    height='100%'/>
                 <Div>
                     <H1>{props.name}</H1>
                 </Div>    

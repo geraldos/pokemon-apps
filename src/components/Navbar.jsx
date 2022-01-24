@@ -29,6 +29,9 @@ const HeaderTitle = styled.h1`
 `;
 
 const HeaderMenu = styled.a`
+    ${mq_min_width[2]}{
+        display: none;
+    }
     ${mq_min_width[3]}{
         display: none;
     }
@@ -72,11 +75,11 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-    ${mq_max_width[1]} {
+    ${mq_max_width[2]} {
         display: list-item;
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
     box-sizing: border-box;
     display: inline-block;
@@ -120,11 +123,11 @@ function Navbar() {
                 <HeaderMenu id="burger" onClick={clickDrawer}>☰</HeaderMenu>
                 <Nav id="drawer">
                     <NavList>
-                        <NavItem>
-                            <NavLink to="/" className={NavAHref}>Home</NavLink>
+                        <NavItem style={{ marginTop: '10px' }}>
+                            <NavLink to="/" className={NavAHref} style={{ margin: '0px 30px 0px 30px', paddingTop: '10px', textDecoration: 'none', color: 'white'}}>Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/pokemonList">My Pokemon</NavLink>
+                            <NavLink to="/my_pokemon" style={{ margin: '0px 30px 0px 30px', paddingTop: '10px', textDecoration: 'none', color: 'white'}}>My Pokemon</NavLink>
                         </NavItem>
                     </NavList>
                 </Nav>

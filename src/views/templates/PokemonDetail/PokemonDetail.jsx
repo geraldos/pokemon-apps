@@ -138,6 +138,9 @@ function PokemonDetails() {
             let id_pokemon = pokemon.id;
             let pokemon_name = prompt("Please choose pokemon's name");
             try {
+                if(pokemon_name == null) {
+                    return;
+                }
                 await db.pokemons.add({
                     pokemon_name,
                     id_pokemon
